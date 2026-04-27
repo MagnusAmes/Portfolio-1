@@ -1,6 +1,6 @@
 ---
 title: "Portfolio #1 - Nipah Virus"
-author: "Magnus"
+author: "Magnus Ames"
 format: pdf
 editor: visual
 ---
