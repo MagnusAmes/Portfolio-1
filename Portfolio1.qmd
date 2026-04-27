@@ -40,6 +40,7 @@ min_t_clean <- min_t_clean[-c(1:4), ]
 ```
 
 ```{r}
+#| echo: false
 #| fig-alt: A boxplot showing the relationship between yearly Nipah virus infections and minimum year-long temperature. Year long minimum temperatures are 18 and 19 degrees celcius. The median yearly Nipah virus case count for 18 degrees celcius is ~14 cases/year and ~7 cases/year for 19 degrees celcius, indicating that lower minimum year-long temperatures result in more Nipah virus cases. 
 ggplot(min_t_clean, aes(x = min_t, y = Infected)) + 
   geom_boxplot() +
@@ -62,6 +63,7 @@ max_t_clean <- max_t_clean[-c(0:1), ]
 ```
 
 ```{r}
+#| echo: false
 #| fig-alt: A boxplot showing the relationship between yearly Nipah virus infections and maximum year-long temperature. Year long maximum temperatures are 33, 34, and 35 degrees celcius. Median Nipah virus cases for 34 degrees celcius is prominently higher than for 33 or 35 degrees celcius, but this expresses more than anything that the two most prominent outlier years had 34 degrees celcius maximum temperatures. Because there is no directional relationship (lower temperature --> higher/lower cases or higher temperature --> higher/lower cases), maximum temperature can be seen not to affect Nipah virus yearly infections. 
 ggplot(max_t_clean, aes(x = max_t, y = Infected)) +
   geom_boxplot() +
@@ -87,6 +89,7 @@ pop_data <- NiV |>
 ```
 
 ```{r}
+#| echo: false
 #| fig-alt: A line graph showing the number of Nipah virus infections in Bangladesh from 2001-2024 plotted alongside scaled Bangladeshi total population, rural population, and urban population (in millions - population/1*10^6). Nipah virus infection numbers are seen to be highly inconsistent year-to-year (0-67 cases) while rural population is stable at ~100,000,000, urban population grows from 32,000,000-72,000,000, and total population increases from 136,000,000-172,000,000. Despite population growth, Nipah virus cases are seen to have remained low (<= 10 cases/year) from 2016-2024. This demonstrates that Nipah virus transmission is likely not affected by changing Bangladeshi population. 
 ggplot(pop_data, aes(x = Year)) +
   geom_line(aes(y = scaled_pop, color = type)) +
