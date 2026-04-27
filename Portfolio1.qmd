@@ -3,6 +3,10 @@ title: "Portfolio #1 - Nipah Virus"
 author: "Magnus Ames"
 format: pdf
 editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
 
 ```{r}
